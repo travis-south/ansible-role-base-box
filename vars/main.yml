@@ -1,0 +1,36 @@
+---
+# vars file for ansible-role-base-vagrant-box
+# Add any extra apt or yum packages you would like installed.
+extra_packages:
+  - sqlite
+  - htop
+  - telnet
+  - vim
+
+# You can configure almost anything else on the server in the rest of this file.
+# extra_security_enabled: false
+
+firewall_allowed_tcp_ports:
+  - "22"
+  - "25"
+  - "80"
+  - "81"
+  - "137"
+  - "138"
+  - "139"
+  - "443"
+  - "445"
+  - "3306"
+  - "4444"
+  - "8001"
+  - "8025"
+  - "8080"
+  - "8443"
+  - "8983"
+
+firewall_log_dropped_packets: false
+
+# Run specified scripts before or after VM is provisioned. Path is relative to
+# the `provisioning/playbook.yml` file.
+pre_provision_scripts: []
+post_provision_scripts: []

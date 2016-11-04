@@ -1,0 +1,25 @@
+---
+galaxy_info:
+  author: Irvin Capagcuan
+  description: Base box
+  company: Capagcuan.org
+  license: license (GPLv2, CC-BY, etc)
+  min_ansible_version: 1.8
+  platforms:
+  - name: EL
+    versions:
+    - 5
+    - 6
+    - 7
+  categories:
+  - development
+  - system
+  - web
+dependencies:
+  - { role: geerlingguy.repo-remi, when: ansible_os_family == 'RedHat' }
+  - geerlingguy.firewall
+  - geerlingguy.git
+  - geerlingguy.postfix
+  - geerlingguy.daemonize
+  - geerlingguy.ruby
+  - { role: geerlingguy.security, when: extra_security_enabled }

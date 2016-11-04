@@ -1,0 +1,8 @@
+---
+- name: Get software for Python-based control.
+  yum: "name={{ item }} state=installed"
+  with_items:
+    - "curl"
+    - "python-pycurl"
+    - "@development"
+    - "unzip"

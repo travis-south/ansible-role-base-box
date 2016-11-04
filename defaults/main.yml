@@ -1,0 +1,31 @@
+---
+firewall_allowed_tcp_ports:
+  - "22"
+  - "25"
+  - "80"
+  - "81"
+  - "443"
+  - "4444"
+  - "8025"
+  - "8080"
+  - "8443"
+  - "8983"
+
+firewall_log_dropped_packets: false
+
+extra_security_enabled: false
+
+ruby_install_gems_user: root
+
+# Add any extra apt or yum packages you would like installed.
+extra_packages:
+  - htop
+
+vagrant_user: vagrant
+
+timezone: Asia/Manila
+
+# Run specified scripts before or after VM is provisioned. Path is relative to
+# the `provisioning/playbook.yml` file.
+pre_provision_scripts: []
+post_provision_scripts: []
